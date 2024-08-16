@@ -19,6 +19,7 @@ export class AkeboshiHimari<
 	}
 
 	run: Database['run']
+	'~source'?: Source
 
 	create<const SQL extends string>(
 		sql: SQL

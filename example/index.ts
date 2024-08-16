@@ -32,8 +32,7 @@ const result = db.all(`
     SELECT
         u.name,
         a.name as affiliation,
-        p.alias,
-        u.display
+        p.alias
     FROM user as u
     JOIN
         profile p ON u.id = p.uid
