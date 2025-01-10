@@ -1,14 +1,61 @@
 {
-  "name": "dorosql",
-  "module": "index.ts",
-  "type": "module",
-  "scripts": {
-    "dev": "bun --watch example/index.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+	"name": "himari-sql",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "bun --watch example/index.ts",
+		"build": "rm -rf dist && bun build.ts"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"tsup": "^8.3.5"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"author": {
+		"name": "saltyAom",
+		"url": "https://github.com/SaltyAom",
+		"email": "saltyaom@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/saltyaom/himari-sql"
+	},
+	"bugs": "https://github.com/saltyaom/himari-sql/issues",
+	"homepage": "https://github.com/saltyaom/himari-sql",
+	"keywords": [
+		"sql",
+		"typescript"
+	],
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/cjs/index.js"
+		},
+		"./create": {
+			"types": "./dist/create.d.ts",
+			"import": "./dist/create.mjs",
+			"require": "./dist/cjs/create.js"
+		},
+		"./himari": {
+			"types": "./dist/himari.d.ts",
+			"import": "./dist/himari.mjs",
+			"require": "./dist/cjs/himari.js"
+		},
+		"./select": {
+			"types": "./dist/select.d.ts",
+			"import": "./dist/select.mjs",
+			"require": "./dist/cjs/select.js"
+		},
+		"./utils": {
+			"types": "./dist/utils.d.ts",
+			"import": "./dist/utils.mjs",
+			"require": "./dist/cjs/utils.js"
+		}
+	}
 }

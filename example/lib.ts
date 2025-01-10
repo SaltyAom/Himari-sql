@@ -29,7 +29,7 @@ export class AkeboshiHimari<
 	> {
 		this.db.run(sql)
 
-		return this
+		return this as any
 	}
 
 	one<const SQL extends string>(sql: SQL): Himari.Select<SQL, Source> | null {

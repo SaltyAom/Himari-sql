@@ -1,0 +1,10 @@
+example
+node_modules
+src
+trace
+.gitignore
+.prettierrc
+build.ts
+bun.lockb
+tsconfig.json
+tsconfig.dts.json
